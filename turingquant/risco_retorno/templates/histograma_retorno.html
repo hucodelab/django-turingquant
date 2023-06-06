@@ -1,0 +1,24 @@
+<!-- histograma_retorno.html -->
+<html>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+{% block content %}
+  <h2>Histograma de Retornos Diários</h2>
+  <form method="post">
+  {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+
+  </form>
+
+  <body>
+    <div id="chart" style="width: 100%; height: 100%;"></div>
+    <script>
+      var graph = {{ plot_div | safe }};
+      Plotly.plot('chart', graph.data, graph.layout);
+    </script>
+  </body>
+
+{% endblock %}
+
+</html>
