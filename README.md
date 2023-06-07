@@ -38,6 +38,8 @@ pip install yfinance
 pip install 
 ```
 
+# 6. Modificar os dois arquivos: urls.py. O da app e o do projeto
+
 ## commandos do django:
 
 ```
